@@ -47,7 +47,7 @@ angular.module('hmsDerectives', [])
           handApiHeadData: '=param2',
           handApiBodyData: '=param3'
         },
-        templateUrl: 'build/pages/hmsDirectiveHtml/hmsTable.html',
+        templateUrl: 'build/lib/handLib/hmsDirectiveHtml/hmsTable.html',
         link: function (scope, element, attrs) {
           var ta = element[0], $ta = element;
           //添加class，用于CSS
