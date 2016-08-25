@@ -9,7 +9,7 @@
       </table>
     </div>
     <div class="col col-75" style="z-index: 1">
-      <ion-scroll delegate-handle="handApiTableHeader" has-bouncing="false" direction="x" scrollbar-x="true"
+      <ion-scroll delegate-handle="hmsTableHeader" has-bouncing="false" direction="x" scrollbar-x="true"
                   style="margin-top: 0;margin-left: -1px;overflow-x: hidden;">
         <table class="right">
           <tr class="table-header-tr">
@@ -39,7 +39,7 @@
           </table>
         </div>
         <div class="col col-75" style="z-index: 0">
-          <ion-scroll delegate-handle="handApiTableBody" has-bouncing="false" direction="x" scrollbar-x="false"
+          <ion-scroll delegate-handle="hmsTableBody" has-bouncing="false" direction="x" scrollbar-x="false"
                       on-scroll="scroll()" style="margin-top: 0;margin-left: -1px;">
             <table class="right">
               <tr ng-class="{true:'tr-odd-bgcolor',false:'tr-even-bgcolor'}[$index%2==0]"
@@ -47,7 +47,7 @@
                 <td ng-class="{'isTodo':item.bodyValue==''}"
                     ng-repeat="item in item.bodyItem">
                   <div class="text-overflow-ellipsis column-default-width column-{{$index}} num"
-                       ng-click="handApiResetWidth($index,item.bodyValue)">
+                       ng-click="hmsResetWidth($index,item.bodyValue)">
                     {{item.bodyValue}}
                   </div>
                 </td>
