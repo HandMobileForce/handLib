@@ -12,12 +12,12 @@
 
 ## download or update
 ```bash
-1、get clone https://github.com/HandMobileForce/hand-api.git
+1、get clone https://github.com/HandMobileForce/handLib.git
 2、修改代码
 3、Git add –all
 4、Git commit –m ‘备注说明’
 5、Git push origin master:master
-bower update  更新所有的 （bower update hand-api）更新当前库
+bower update  更新所有的 （bower update handLib）更新当前库
 注：当需要保存上一个版本的时候，可以在提交之前给上一个版本取个版本号。用bower install
     每次下载的是master上最新的代码，这样通过设定的版本号，可以下载某个当前版本的代码。
 ```
