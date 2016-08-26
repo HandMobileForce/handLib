@@ -43,9 +43,9 @@ angular.module('hmsDerectives', [])
         restrict: 'ACE',
         //scope重定义
         scope: {
-          handColumnName: '=param1',
-          handApiHeadData: '=param2',
-          handApiBodyData: '=param3'
+          handColumnName: '=columnname',
+          handApiHeadData: '=headdata',
+          handApiBodyData: '=bodydata'
         },
         templateUrl: 'build/lib/handLib/hmsDirectiveHtml/hmsTable.html',
         link: function (scope, element, attrs) {

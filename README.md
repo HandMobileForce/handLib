@@ -42,24 +42,24 @@ bower update  更新所有的 （bower update handLib）更新当前库
   <!--首行首列固定的滚动表格 begin-->
   <ion-content scroll="false">
     <hms-table
-      param1="columnName"
-      param2="headData"
-      param3="bodyData">
+      columnname="userColumnName"
+      headdata="userHeadData"
+      bodydata="userBodyData">
     </hms-table>
   </ion-content>
   <!--end-->
 
   js：中定义数据的来源，格式如下
    //数据来源
-   $scope.columnName = "姓名";
+   $scope.userColumnName = "姓名";
     
-   $scope.headData = [
+   $scope.userHeadData = [
      {"headItem": "语文"}, {"headItem": "数学"}, {"headItem": "英语"},
      {"headItem": "物理"}, {"headItem": "化学"}, {"headItem": "生物"}, 
      {"headItem": "历史"}, {"headItem": "地理"}, {"headItem": "政治"}
    ];
    
-   $scope.bodyData = [
+   $scope.userBodyData = [
       {
         "code": "0001",
         "name": "张三",
