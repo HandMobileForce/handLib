@@ -25,7 +25,7 @@
   </div>
 
   <div class="row table-body animated">
-    <ion-scroll direction="y" scrollbar-y="false" style="height: 100%">
+    <ion-scroll direction="y" scrollbar-y="false" style="height: 100%;width: 100%">
       <div class="row">
         <div class="col col-25" style="z-index: 1;margin-top: 0px;">
           <table class="left">
@@ -44,8 +44,7 @@
             <table class="right">
               <tr ng-class="{true:'tr-odd-bgcolor',false:'tr-even-bgcolor'}[$index%2==0]"
                   ng-repeat="item in handApiBodyData">
-                <td ng-class="{'isTodo':item.bodyValue==''}"
-                    ng-repeat="item in item.bodyItem">
+                <td ng-repeat="item in item.bodyItem">
                   <div class="text-overflow-ellipsis column-default-width column-{{$index}} num"
                        ng-click="hmsResetWidth($index,item.bodyValue)">
                     {{item.bodyValue}}
