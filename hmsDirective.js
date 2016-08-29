@@ -2,7 +2,7 @@
  * Created by 2016年7月30日
  */
 
-angular.module('hmsDerectives', [])
+angular.module('hmsDirectives', [])
   .directive('hmsInputNumber', function ($ionicLoading) {
     return {
       link: function (scope, iElement, iAttrs, controller) {
