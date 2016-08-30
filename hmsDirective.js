@@ -43,9 +43,9 @@ angular.module('hmsDirectives', [])
         restrict: 'ACE',
         //scope重定义
         scope: {
-          handColumnName: '=columnname',
-          handApiHeadData: '=headdata',
-          handApiBodyData: '=bodydata'
+          hmsColumnName: '=columnname',
+          hmsHeadData: '=headdata',
+          hmsBodyData: '=bodydata'
         },
         templateUrl: 'build/lib/handLib/hmsDirectiveHtml/hmsTable.html',
         link: function (scope, element, attrs) {

@@ -1,10 +1,10 @@
-<div class="HandApiTable">
+<div class="HmsTable">
   <div class="row table-header animated">
     <div class="col col-25" style="z-index: 2;margin-top: 0px;">
       <table class="left">
         <tr class="table-header-tr">
           <td style="width: 30%">#</td>
-          <td style="width: 70%">{{handColumnName}}</td>
+          <td style="width: 70%">{{hmsColumnName}}</td>
         </tr>
       </table>
     </div>
@@ -13,7 +13,7 @@
                   style="margin-top: 0;margin-left: -1px;overflow-x: hidden;">
         <table class="right">
           <tr class="table-header-tr">
-            <td ng-repeat="item in handApiHeadData">
+            <td ng-repeat="item in hmsHeadData">
               <div class="column-default-width column-{{$index}}">
                 {{item.headItem}}
               </div>
@@ -30,7 +30,7 @@
         <div class="col col-25" style="z-index: 1;margin-top: 0px;">
           <table class="left">
             <tr ng-class="{true:'tr-odd-bgcolor',false:'tr-even-bgcolor'}[$index%2==0]"
-                ng-repeat="item in handApiBodyData">
+                ng-repeat="item in hmsBodyData">
               <td style="width: 30%;background-color: rgba(236,233,216,1)">{{$index+1}}</td>
               <td style="width: 70%;background-color: rgba(236,233,216,.5)">
                 {{item.name}}
@@ -43,7 +43,7 @@
                       on-scroll="scroll()" style="margin-top: 0;margin-left: -1px;">
             <table class="right">
               <tr ng-class="{true:'tr-odd-bgcolor',false:'tr-even-bgcolor'}[$index%2==0]"
-                  ng-repeat="item in handApiBodyData">
+                  ng-repeat="item in hmsBodyData">
                 <td ng-repeat="item in item.bodyItem">
                   <div class="text-overflow-ellipsis column-default-width column-{{$index}} num"
                        ng-click="hmsResetWidth($index,item.bodyValue)">
