@@ -139,4 +139,61 @@ angular.module('hmsDirectives', [])
         });
       }
     };
-  }]);
+  }])
+    .directive('hmsToTop',['$ionicScrollDelegate',function($ionicScrollDelegate){
+      return{
+        restrict:'EA',
+        replace:true,
+        scope:{
+          imgPath:'@',
+          restore:'&',
+          img_restore1:'@imgClass'
+        },
+        template:'<img ng-src="{{imgPath}}" id="img_id" ng-click="restore()" on-drag="onDrag($event)" 								   	on-touch="onTouch($event)" class="{{img_restore1}}">',
+        link:function(scope,element,attras){
+          scope.restore=function(){
+            var top=$ionicScrollDelegate.getScrollPosition().top;
+            //console.log(element[0].style.display);
+            //element[0].style.display="none";
+            if(top>0){
+              //element.style.display="inline";
+              $ionicScrollDelegate.scrollTop(true);
+            }
+          };
+          var ox,oy,maxWidth,maxHeight;
+          if(attras.checkdrag==='true') {
+            scope.onTouch = function ($event) {
+              ox = $event.target.offsetLeft;
+              oy = $event.target.offsetTop;
+              maxWidth = screen.width-element[0].offsetWidth;
+              maxHeight = screen.height-element[0].offsetWidth;
+              //console.log(maxHeight+","+maxWidth);
+            };
+            scope.onDrag = function ($event) {
+              var el = $event.target,
+                  dx = $event.gesture.deltaX,
+                  dy = $event.gesture.deltaY;
+              distanceX = ox + dx;
+              distanceY = oy + dy;
+              //console.log(distanceX+","+distanceY);
+              if (distanceX < 0) {
+                el.style.left = 0;
+              } else if (distanceX > maxWidth) {
+                el.style.right = 0;
+              } else {
+                el.style.left = ox + dx + "px";
+              }
+              if (distanceY < 0) {
+                el.style.top = 0;
+              } else if (distanceY > maxHeight) {
+                el.style.bottom = 0;
+              } else {
+                el.style.top = oy + dy + "px";
+              }
+
+            };
+          }
+        }
+      }
+    }])
+;
