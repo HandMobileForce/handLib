@@ -200,3 +200,117 @@
   border-radius: 50%;
   transform: translate3d(0, 0, 0) rotate(45deg);
 }
+.hmsSelector .line {
+  padding: 0;
+  height: 50px;
+  line-height: 50px;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  margin-top: -1px;
+}
+.hmsSelector .myValue {
+  padding:0;
+  width: 41.5%;
+  text-align: right;
+  color: #757575;
+}
+.hmsSelector .myValueBrown {
+  padding:0;
+  width: 41.5%;
+  text-align: right;
+  color: #9D9D9D;
+}
+.hmsSelector .myTitle {
+  padding: 0 0 0 4.3%;
+  width: 50%;
+  font-size: 16px;
+  color: #9D9D9D;
+}
+.hmsSelector .myChevron {
+  width: 4.5%;
+  text-align: right;
+  color: #dddddd;
+}
+.hmsSelector .marginRight {
+  width: 4%;
+}
+.hmsManyDataModal .input-left {
+  width: 10%;
+  padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  color: #555;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 0.375rem 0 0 0.375rem;
+  float: left;
+}
+.hmsManyDataModal .input-search {
+  width: 100%;
+  height: 2rem;
+  padding: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+.hmsManyDataModal .input-style {
+  width: 90%;
+  float:left;
+}
+.hmsManyDataModal .delete {
+  position: absolute;
+  right: 4%;
+  font-size: 1.2em;
+  top: 11px;
+}
+
+.hmsModal .createNewRecord {
+  padding-top: 4px;
+  padding-right: 30px;
+  padding-left: 20px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 35px;
+  text-align: center;
+}
+.hmsModal .bar-border-bottom {
+  border-bottom: 1px solid rgb(56,126,245);
+}
+.hmsModal .input-left {
+  padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  color: #555;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 0.375rem 0 0 0.375rem;
+  float: left;
+}
+
+.hmsModal .input-search {
+  width: 100%;
+  height: 2rem;
+  padding: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+.hmsModal .closeIcon {
+  font-size:16px;
+}

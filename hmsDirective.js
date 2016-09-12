@@ -196,4 +196,317 @@ angular.module('hmsDirectives', [])
         }
       }
     }])
+    .directive('hmsSvgLoader', function () {
+      return {
+        restrict: 'A',
+        link: function (scope, element, attrs) {
+          element.addClass('pageload-overlay');
+          var template = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60" preserveAspectRatio="none"><path/></svg>';
+          var ele = angular.element(template);
+          element.append(ele);
+        }
+      };
+    })
+    /**
+     * Created by WillJiang on 9/1/16.
+     */
+    .directive('hmsInputProgress', function () {
+      return {
+        restrict: 'EA',
+        link: function (scope, element, attrs) {
+          var template = '<div class="colors"></div>';
+          var colorDiv = angular.element(template);
+
+          var classStyle = attrs['progressClass'];
+          var position = attrs['progressPosition'];
+          var colors = scope[attrs['progressColorAry']];
+          var eles = document.querySelectorAll('input,textarea,select');
+          var inputs = [];
+          angular.forEach(eles, function (item, index) {
+            if (item.type !== 'button' && item.type !== 'submit') {
+              inputs.push(item);
+              item.addEventListener('input', cb, false);
+            }
+          });
+
+          element.append(colorDiv);
+          switch (classStyle) {
+            case 'flash':
+              //蹇呴』璁剧疆 progressColorAry 鍙傛暟
+              break;
+            case 'gradient':
+              var temp;
+              if (colors) {
+                temp = [
+                  [colors[0], '0'], [colors[1], '100%']
+                ];
+              } else {
+                temp = [
+                  ['#009dff', '0'], ['#00c8ff', '100%']
+                ];
+              }
+              colors = generateCSSGradient(temp);
+              break;
+            case 'sections':
+              //蹇呴』璁剧疆 progressColorAry 鍙傛暟
+              var step = 100 / (colors.length);
+              var p = 0;
+              var color = [];
+              angular.forEach(colors, function (item, index) {
+                color.push([item, p + '%']);
+                p += step;
+                color.push([item, p + '%']);
+              });
+              colors = generateCSSGradient(color);
+              break;
+            default:
+              if (!colors) {
+                colors = ['#009dff'];
+              }
+              break;
+          }
+
+          position === 'top' ? element.addClass('top-' + classStyle) : element.addClass('bottom-' + classStyle);
+
+          function cb() {
+            var t = [];
+            for (var n = inputs.length; n--;) {
+              if (!inputs[n].value.length) t.push(inputs[n]);
+            }
+            var r = t.length;
+            var i = inputs.length;
+            var s = element;
+            for (var o = s.length; o--;) {
+              s[o].style.width = 100 - r / i * 100 + "%";
+              switch (classStyle) {
+                case 'flash':
+                  s[o].style.background = colors[i - r - 1];
+                  break;
+                case 'gradient':
+                  s[o].style.background = colors;
+                  break;
+                case 'sections':
+                  var child = element.children('.colors');
+                  child[0].style.background = colors;
+                  child[0].style.width = window.innerWidth + "px";
+                  break;
+                default:
+                  s[o].style.background = colors[0];
+                  break;
+              }
+            }
+          }
+
+          function generateCSSGradient(colours) {
+            var l = colours.length, i;
+            for (i = 0; i < l; i++) colours[i] = colours[i].join(" ");
+            return "linear-gradient( to right, " + colours.join(", ") + ")";
+          }
+        }
+      };
+    })
+    .directive('hmsSelector',function ($ionicModal) {
+      return {
+        restrict:"EA",
+        templateUrl:"hmsSelector.html",
+        scope:{
+          hmsTitle:"=",
+          hmsValue:"=",
+          hmsModalValue:"=",
+          hmsPaging:"="
+        },
+        link: function (scope,element,attrs) {
+          scope.screenHeig = window.innerHeight;
+          console.log("高度",scope.screenHeig);
+          //根据值的多少判断打开哪个modal
+          if (scope.hmsModalValue.length>=scope.hmsPaging) {        //数值多，打开带筛选框的
+            $ionicModal.fromTemplateUrl('hms-many-data-modal.html', {
+              scope: scope,
+              animation: 'slide-in-up'
+            }).then(function(modal) {
+              scope.manyModal = modal;
+            });
+            scope.info = {    //过滤器
+              filter:""
+            };
+            scope.openModal = function() {    //打开modal
+              scope.manyModal.show();
+            };
+            //清选
+            scope.clear = function () {
+              scope.hmsValue = "";
+              scope.info.filter = "";
+              scope.manyModal.hide();
+            }
+            //返回,关闭modal
+            scope.closeModal = function() {
+              scope.manyModal.hide();
+              scope.info.filter = "";
+            };
+            //选值
+            scope.choose = function (item) {
+              scope.hmsValue = item;
+              scope.info.filter = "";
+              scope.manyModal.hide();
+            };
+            //删除输入的值
+            scope.delete = function () {
+              scope.info.filter = "";
+            }
+          } else {    //数值不多，打开不带筛选框的
+            $ionicModal.fromTemplateUrl('hms-modal.html', {
+              scope: scope,
+              animation: 'slide-in-up'
+            }).then(function(modal) {
+              scope.modal = modal;
+            });
+            scope.openModal = function() {
+              scope.modal.show();
+              setTimeout(function () {
+                if (scope.hmsModalValue.length == 3) {
+                  $(".hmsModal").css("top", scope.screenHeig - 202 + 'px')
+                } else if (scope.hmsModalValue.length >= 4 && scope.hmsModalValue.length<scope.hmsPaging) {
+                  $(".hmsModal").css("top", 47 + '%');
+                  $(".hmsModal").css("min-height", 53 + '%')
+                } else if(scope.hmsModalValue.length<3){
+                  $(".hmsModal").css("top", scope.screenHeig - 149 + 'px')
+                }
+              },0)
+            };
+            scope.choose = function (item) {
+              scope.hmsValue = item;
+              scope.modal.hide();
+            }
+          }
+        }
+      }
+    })
+    .directive('hmsSlideList', function () {
+      return {
+        restrict: 'EA',
+        scope:true,
+        template:'<div ng-click="selectList()" class="select" style="border-radius:8px"> <div><input class="selectInput" type="text" ng-model="handAPIrecord"  readonly required></div> <div><img class="imgIcon"  src="http://sandbox.runjs.cn/uploads/rs/274/c3z5q3my/list.png"></div> </div> <div  class="selectLists" style="display:none">  <div class="search"> <div><input class="serchInput" ng-change="valueChange(selectParam)" ng-model="selectParam"></div>   <div> <i class="icon ion-ios-search searchIcon"></i></div></div> <ion-scroll delegate-handle="contentHandle"  class="serchScroll"> <div class="itemList" ng-repeat="item in handAPIItemlist" ng-init="index = $index" ng-click="select(index)"><div ng-bind-html="item.data | highlight:selectParam"></div></div><ion-infinite-scroll on-infinite="loadData()" ng-if="pagination.SearchIsshow"></ion-infinite-scroll></ion-scroll></div>',
+
+        link:function(scope,element,attrs){
+          if(attrs.listdata){
+            scope.handAPIItemlist = scope[attrs.listdata];
+            scope.handAPIcopyList = scope.handAPIItemlist;
+          }
+          scope.handAPIrecord = scope[attrs.selectdata];
+
+        },
+
+        controller: function ($scope, $element,$attrs,$timeout,$ionicScrollDelegate) {
+          var elem = angular.element($element);
+
+          var child = elem.children('div');
+
+          //输入框的输入的值
+          $scope.selectParam = "";
+          //分页参数
+          $scope.pagination = {
+            SearchIsshow:true,
+            pageNum:0,
+            Timer:''
+          };
+          //下拉列表
+          $scope.selectList = function () {
+
+            var node= child[0];
+            var node2 =child[1];
+            if(node2.style.display =='none'){
+              $(node2).slideDown(100);
+              node.style.borderBottomLeftRadius ="";
+              node.style.borderBottomRightRadius ="";
+
+            }else{
+              $(node2).slideUp(100);
+              node.style.borderBottomLeftRadius ="8px";
+              node.style.borderBottomRightRadius ="8px";
+
+            }
+          };
+          //下拉选择
+          $scope.select = function(index){
+            var selectList = $('.selectLists');
+            $(selectList[0]).slideUp(100);
+            var node= document.getElementsByClassName('select');
+            node[0].style.borderBottomLeftRadius ="8px";
+            node[0].style.borderBottomRightRadius ="8px";
+            $scope[$attrs.selectdata]=$scope.handAPIItemlist[index].data;
+            $scope.handAPIrecord = $scope.handAPIItemlist[index].data;
+          };
+
+          //分页加载数据(这儿写分页方法)
+          $scope.loadData = function(){
+
+            var array = [];
+            if($scope.selectParam.length>0){
+              angular.forEach($scope.handAPIItemlist,function(data,key){
+                var flag =  new RegExp($scope.selectParam).test(data.data);
+                if(flag){
+                  array.push(data);
+                }
+              });
+              $scope.handAPIItemlist = array;
+              $scope.pagination.SearchIsshow = false;
+            }else{
+              $scope.handAPIItemlist = $scope.handAPIcopyList;
+              $scope.pagination.SearchIsshow = false;
+            }
+            $scope.$broadcast('scroll.infiniteScrollComplete');
+
+          };
+          //查询调用分页
+          $scope.initLoadData = function(){
+            if ($scope.pagination.Timer) {
+              clearTimeout($scope.pagination.Timer);
+              $scope.pagination.Timer='';
+            }
+            $timeout(function(){
+              $scope.pagination.SearchIsshow = true;
+              $scope.pagination.pageNum = 0;
+              // $scope.handAPIItemlist=[];
+              $timeout(function(){
+                $scope.loadData();
+              },500);
+              //  $ionicScrollDelegate.$getByHandle('contentHandle').resize();
+              // $scope.$broadcast('scroll.infiniteScrollComplete');
+            },50)
+          };
+          //监听查询值变化
+          $scope.valueChange = function(){
+            $scope.pagination.pageNum = 0;
+            //$scope.handAPIItemlist=[];
+            if ($scope.pagination.Timer) {
+              clearTimeout($scope.pagination.Timer);
+            }
+            $scope.pagination.Timer = setTimeout(function () {
+              $scope.initLoadData();
+            }, 50);
+          };
+
+
+        }
+
+      }
+
+    })
+  //过滤器查询匹配的值
+    .filter("highlight", function ($sce) {
+
+      var fn = function (text, search) {
+        if (!search) {
+          return $sce.trustAsHtml(text);
+        }
+        text = text.toString();
+        if (text.indexOf(search) == -1) {
+          return text;
+        }
+        var regex = new RegExp(search, 'gi');
+        var result = text.replace(regex, '<span style="color:red;">$&</span>');
+        return $sce.trustAsHtml(result);
+      };
+      return fn;
+    })
 ;
