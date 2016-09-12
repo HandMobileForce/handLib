@@ -239,7 +239,6 @@ bower update  更新所有的 （bower update handLib）更新当前库
 ## hmsSlideList
 * 带有搜索和分页的下拉框。
 ```bash
- <hms-to-top img-class="img_restore" checkDrag="true" animation-class="rotate1" img-path="http://sandbox.runjs.cn/uploads/rs/197/vprxhxwe/add.png"></hms-to-top>
     html中：
      <div class = "optiontextValue">
     	<hms-slide-list listData="itemlist" selectData="record" >
