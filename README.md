@@ -93,6 +93,7 @@ bower update  更新所有的 （bower update handLib）更新当前库
     ];
 ```
 ## hmsToTop
-*点击按钮使列表从页面底部回到页面顶部，并且按钮在屏幕中可以随意拖动。
+* 点击按钮使列表从页面底部回到页面顶部，并且按钮在屏幕中可以随意拖动。
+```bash
  <hms-to-top img-class="img_restore" checkDrag="true" animation-class="rotate1" img-path="http://sandbox.runjs.cn/uploads/rs/197/vprxhxwe/add.png"></hms-to-top>
 ```
