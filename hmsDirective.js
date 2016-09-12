@@ -196,7 +196,7 @@ angular.module('hmsDirectives', [])
         }
       }
     }])
-    .directive('hmsSvgLoader', function () {
+/*    .directive('hmsSvgLoader', function () {
       return {
         restrict: 'A',
         link: function (scope, element, attrs) {
@@ -207,9 +207,9 @@ angular.module('hmsDirectives', [])
         }
       };
     })
-    /**
+    /!**
      * Created by WillJiang on 9/1/16.
-     */
+     *!/
     .directive('hmsInputProgress', function () {
       return {
         restrict: 'EA',
@@ -304,8 +304,8 @@ angular.module('hmsDirectives', [])
           }
         }
       };
-    })
-    .directive('hmsSelector',function ($ionicModal) {
+    })*/
+  /*  .directive('hmsSelector',function ($ionicModal) {
       return {
         restrict:"EA",
         templateUrl:"hmsSelector.html",
@@ -508,5 +508,5 @@ angular.module('hmsDirectives', [])
         return $sce.trustAsHtml(result);
       };
       return fn;
-    })
+    })*/
 ;
