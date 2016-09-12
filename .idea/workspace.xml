@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a02d003-56eb-413a-9101-636cbfa85b0d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hmsDirective.js" afterPath="$PROJECT_DIR$/hmsDirective.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hmsDirective.scss" afterPath="$PROJECT_DIR$/hmsDirective.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="handLib.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hmsDirective.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hmsDirective.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hmsDirective.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3106796">
-              <caret line="132" column="55" selection-start-line="132" selection-start-column="55" selection-end-line="132" selection-end-column="55" />
+            <state vertical-scroll-proportion="-27.892857">
+              <caret line="167" column="23" selection-start-line="167" selection-start-column="23" selection-end-line="167" selection-end-column="23" />
               <folding>
                 <marker date="1473669244171" expanded="true" signature="13445:13462" placeholder="..." />
                 <marker date="1473669244171" expanded="true" signature="13697:13709" placeholder="..." />
@@ -77,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hmsDirective.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="hmsDirective.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hmsDirective.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.6">
-              <caret line="308" column="25" selection-start-line="308" selection-start-column="25" selection-end-line="308" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0952381">
+              <caret line="371" column="0" selection-start-line="371" selection-start-column="0" selection-end-line="470" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -109,9 +110,9 @@
         <option value="$PROJECT_DIR$/hmsDirectiveHtml/hmsSelector.html" />
         <option value="$PROJECT_DIR$/hmsDirectiveHtml/hmsToTop.html" />
         <option value="$PROJECT_DIR$/hmsDirectiveHtml/hmsSvgLoader.html" />
-        <option value="$PROJECT_DIR$/hmsDirective.scss" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/hmsDirective.js" />
+        <option value="$PROJECT_DIR$/hmsDirective.scss" />
       </list>
     </option>
   </component>
@@ -293,14 +294,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hmsDirective.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6">
-          <caret line="308" column="25" selection-start-line="308" selection-start-column="25" selection-end-line="308" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hmsDirectiveHtml/hmsToTop.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.225806">
@@ -319,13 +312,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hmsDirective.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3106796">
-          <caret line="132" column="55" selection-start-line="132" selection-start-column="55" selection-end-line="132" selection-end-column="55" />
+        <state vertical-scroll-proportion="-27.892857">
+          <caret line="167" column="23" selection-start-line="167" selection-start-column="23" selection-end-line="167" selection-end-column="23" />
           <folding>
             <marker date="1473669244171" expanded="true" signature="13445:13462" placeholder="..." />
             <marker date="1473669244171" expanded="true" signature="13697:13709" placeholder="..." />
             <marker date="1473669244171" expanded="true" signature="18095:18105" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hmsDirective.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0952381">
+          <caret line="371" column="0" selection-start-line="371" selection-start-column="0" selection-end-line="470" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>

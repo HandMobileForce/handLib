@@ -314,3 +314,159 @@
 .hmsModal .closeIcon {
   font-size:16px;
 }
+.handAPI .optiontextValue{
+  position: relative;
+  border: none;
+  margin-top: 50px;
+  margin-left:40px;
+  width: 70%;
+  float:left;
+  color:white;
+}
+.handAPI .select{
+  display: table;width: 100%;
+  border: 1px solid white;
+}
+.handAPI .select div:nth-child(1){
+  display:table-cell;font-weight: normal;
+
+}
+.handAPI .imgIcon{
+  width: 20px;height: 20px;
+}
+.handAPI .select input{
+  width: 96%;float: right;border: none;
+  background:none;
+  height:28px;padding-bottom: 4px;color: white;
+}
+.handAPI .select div:nth-child(2){
+  display: table-cell;width: 20px;padding-top: 3px;vertical-align: middle;padding-right: 3px;
+  i{
+    color: black;
+  }
+}
+.handAPI .selectLists{
+  color:grey;width: 100%;z-index: 1;background-color: white;position:absolute    ;border-bottom-left-radius:8px;border-bottom-right-radius:8px;
+  border-top: none
+}
+.handAPI .search{
+  width: 96%;display: table;border-radius: 8px ;border: 1px solid gainsboro;margin-left: 2%
+}
+.handAPI .search div:nth-child(1){
+  display: table-cell;vertical-align: middle;
+
+}
+.handAPI .serchInput{
+  width: 96%;float: right;border: none;
+}
+.handAPI .search div:nth-child(2){
+  display: table-cell;width: 20px;padding-top: 4px;padding-bottom: 4px;vertical-align: middle;
+}
+.handAPI .serchScroll{
+  width: 100%;max-height: 150px;margin-bottom:4px;
+}
+.handAPI .itemList{
+  margin-left: 3% ;width: 96%;margin-top:8px;
+}
+/**进度条--start*/
+.top-solid {
+  /*background: #009dff;*/
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  height: 4px;
+  transition: all 1s;
+  width: 0;
+  overflow: hidden;
+}
+
+.bottom-solid {
+  /*background: #009dff;*/
+  position: fixed;
+  z-index: 1031;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  transition: all 1s;
+  width: 0;
+  overflow: hidden;
+}
+
+.top-flash {
+  /*background: linear-gradient(to right, #009dff 0, #00c8ff 100%);*/
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  height: 4px;
+  transition: all 1s;
+  width: 0;
+  overflow: hidden;
+}
+
+.bottom-flash {
+  /*background: linear-gradient(to right, #009dff 0, #00c8ff 100%);*/
+  position: fixed;
+  z-index: 1031;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  transition: all 1s;
+  width: 0;
+  overflow: hidden;
+}
+
+.top-gradient {
+  /*background: linear-gradient(to right, #009dff 0, #00c8ff 100%);*/
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  height: 4px;
+  transition: all 1s;
+  width: 0;
+  overflow: hidden;
+}
+
+.bottom-gradient {
+  /*background: linear-gradient(to right, #009dff 0, #00c8ff 100%);*/
+  position: fixed;
+  z-index: 1031;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  transition: all 1s;
+  width: 0;
+  overflow: hidden;
+}
+
+.top-sections {
+  background: linear-gradient(to right, #009dff 0, #00c8ff 100%);
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  height: 4px;
+  transition: all 1s;
+  width: 0;
+  overflow: hidden;
+}
+
+.bottom-sections {
+  background: linear-gradient(to right, #009dff 0, #00c8ff 100%);
+  position: fixed;
+  z-index: 1031;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  transition: all 1s;
+  width: 0;
+  overflow: hidden;
+}
+
+.colors {
+  width: 100%;
+  height: 4px;
+}
+/**进度条--end*/
