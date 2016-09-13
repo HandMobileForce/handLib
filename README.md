@@ -3,13 +3,13 @@
 ## handLib Contents
 * [Getting Started](#getting-started)
     * [download or update](#download-or-update)
-    * [hmsInputNumber](#hmsInputNumber)
+    * [hmsInputNumber](#hmsinputnumber)
     * [hmsMouseEven](#hmsmouseeven)
-    * [hmsTable](#hmsTable)
-    * [hmsToTop](#hmsToTop)
-    * [hmsInputProgress](#hmsInputProgress)
-    * [hmsSelector](#hmsSelector)
-    * [hmsSlideList](#hmsSlideList)
+    * [hmsTable](#hmstable)
+    * [hmsToTop](#hmstoTop)
+    * [hmsInputProgress](#hmsinputprogress)
+    * [hmsSelector](#hmsselector)
+    * [hmsSlideList](#hmsslidelist)
 * [License](#license)
 
 # Getting Started
