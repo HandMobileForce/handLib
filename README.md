@@ -6,11 +6,16 @@
     * [hmsInputNumber](#hmsInputNumber)
     * [hmsMouseEven](#hmsMouseEven)
     * [hmsTable](#hmsTable)
+    * [hmsToTop](#hmsToTop)
+    * [hmsInputProgress](#hmsInputProgress)
+    * [hmsSelector](#hmsSelector)
+    * [hmsSelector](#hmsSelector)
+    * [hmsSlideList](#hmsSlideList)
 * [License](#license)
 
 # Getting Started
 
-## download or update
+# download or update
 ```bash
 1、get clone https://github.com/HandMobileForce/handLib.git
 2、修改代码
@@ -22,20 +27,20 @@ bower update  更新所有的 （bower update handLib）更新当前库
     每次下载的是master上最新的代码，这样通过设定的版本号，可以下载某个当前版本的代码。
 ```
 
-## hmsInputNumber 
+# hmsInputNumber 
 * 控制输入必须为数字
 ```bash
   <input type="text" hms-input-number style="width:100%;font-size: 14px;border:1px solid #000000">
 ```
 
-## hmsMouseEven 
+# hmsMouseEven 
 * 操作DOM元素---选中为红色、取消无样式。
 ```bash
    hand-api-mouse-even="yellow"  (选择需要的颜色传入)
   <input type="text" hms-mouse-even="yellow" style="width:100%;font-size: 14px;border:1px solid #000000">
 ```
 
-## hmsTable
+# hmsTable
 
 ```bash
   html ：
@@ -93,12 +98,12 @@ bower update  更新所有的 （bower update handLib）更新当前库
     ];
 ```
 
-## hmsToTop
+# hmsToTop
 * 点击按钮使列表从页面底部回到页面顶部，并且按钮在屏幕中可以随意拖动。
 ```bash
  <hms-to-top img-class="img_restore" checkDrag="true" animation-class="rotate1" img-path="http://sandbox.runjs.cn/uploads/rs/197/vprxhxwe/add.png"></hms-to-top>
 ```
-## hmsInputProgress
+# hmsInputProgress
 * 当页面包含输入框等元素时，使用此指令展示输入进度
 ```bash
   html中：
@@ -138,7 +143,7 @@ bower update  更新所有的 （bower update handLib）更新当前库
   	 js中：
   	  $scope.progressColor = ["#1ABC9C", "#EC7063","#3498DB","red","blue"];//设置进度条颜色
 ```
-## hmsSelector
+# hmsSelector
 * 根据数据的多少打开不同的modal页
 ```bash
  html中：
@@ -219,7 +224,7 @@ bower update  更新所有的 （bower update handLib）更新当前库
          "甚平", "特拉法尔加·罗", "香克斯"
       ];
 ```
-## hmsSlideList
+# hmsSlideList
 * 带有搜索和分页的下拉框。
 ```bash
    html中：
