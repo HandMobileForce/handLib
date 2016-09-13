@@ -98,25 +98,6 @@ bower update  更新所有的 （bower update handLib）更新当前库
 ```bash
  <hms-to-top img-class="img_restore" checkDrag="true" animation-class="rotate1" img-path="http://sandbox.runjs.cn/uploads/rs/197/vprxhxwe/add.png"></hms-to-top>
 ```
-## hmsSvgLoader
-* 页面跳转时的svg加载动画指令
-```bash
-注意：需在页面引用 <script src="http://sandbox.runjs.cn/uploads/rs/41/r7zpvbql/hmsSvgLoader.js"></script>
- html中：
- //button为触发事件
-  <button ng-click=class1Btn();>
-  			class1
-  </button>
-  //该buttom绑定的svg动画
-  <div hms-svg-loader="class1" hms-show-loader="willShowLoader1"></div>
-  js中：
-  $scope.class1Btn = function(){
-  		$rootScope.willShowLoader1 = true;
-  		$timeout(function(){
-  			$rootScope.willShowLoader1 = false;
-  		},3000);
-  }
-```
 ## hmsInputProgress
 * 当页面包含输入框等元素时，使用此指令展示输入进度
 ```bash
