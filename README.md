@@ -145,7 +145,7 @@ bower update  更新所有的 （bower update handLib）更新当前库
     	<div hms-selector hms-title="'少数据'" hms-value="value.first" hms-modal-value="dataSource1" hms-paging="10"></div>
     	<div hms-selector hms-title="'多数据'" hms-value="value.second" hms-modal-value="dataSource2" hms-paging="10"></div>
  模态框
- //少数据
+ //多数据
  <script id="hmsSelector.html" type="text/ng-template">
  		<div class="hmsSelector">
  <div class="row line" ng-click="openModal()">
@@ -186,7 +186,7 @@ bower update  更新所有的 （bower update handLib）更新当前库
    </ion-content>
  </div>
  	</script>
- 	//多数据
+ 	//少数据
  	<script id="hms-modal.html" type="text/ng-template">
  		<div class="modal hmsModal">
    <ion-header-bar class="bar bar-border-bottom">
