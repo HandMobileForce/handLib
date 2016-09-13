@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a02d003-56eb-413a-9101-636cbfa85b0d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hmsDirective.js" afterPath="$PROJECT_DIR$/hmsDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hmsDirective.scss" afterPath="$PROJECT_DIR$/hmsDirective.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="handLib.iws" />
@@ -55,15 +55,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hmsDirective.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="hmsDirective.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hmsDirective.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-131.71428">
-              <caret line="686" column="0" selection-start-line="686" selection-start-column="0" selection-end-line="686" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.74174756">
+              <caret line="511" column="7" selection-start-line="511" selection-start-column="7" selection-end-line="511" selection-end-column="7" />
               <folding>
-                <marker date="1473729420275" expanded="true" signature="13485:13502" placeholder="..." />
-                <marker date="1473729420275" expanded="true" signature="13737:13749" placeholder="..." />
-                <marker date="1473729420275" expanded="true" signature="18135:18145" placeholder="..." />
+                <marker date="1473732763028" expanded="true" signature="13485:13502" placeholder="..." />
+                <marker date="1473732763028" expanded="true" signature="13737:13749" placeholder="..." />
+                <marker date="1473732763028" expanded="true" signature="18135:18145" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -72,18 +72,18 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="122" column="50" selection-start-line="122" selection-start-column="42" selection-end-line="122" selection-end-column="50" />
+            <state vertical-scroll-proportion="86.78571">
+              <caret line="103" column="96" selection-start-line="103" selection-start-column="96" selection-end-line="103" selection-end-column="96" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hmsDirective.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hmsDirective.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hmsDirective.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52772075">
-              <caret line="560" column="22" selection-start-line="560" selection-start-column="22" selection-end-line="560" selection-end-column="22" />
+            <state vertical-scroll-proportion="-164.9">
+              <caret line="559" column="13" selection-start-line="559" selection-start-column="13" selection-end-line="559" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -111,9 +111,9 @@
         <option value="$PROJECT_DIR$/hmsDirectiveHtml/hmsSelector.html" />
         <option value="$PROJECT_DIR$/hmsDirectiveHtml/hmsToTop.html" />
         <option value="$PROJECT_DIR$/hmsDirectiveHtml/hmsSvgLoader.html" />
+        <option value="$PROJECT_DIR$/hmsDirective.scss" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/hmsDirective.js" />
-        <option value="$PROJECT_DIR$/hmsDirective.scss" />
       </list>
     </option>
   </component>
@@ -304,9 +304,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="269" column="0" selection-start-line="269" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
           <folding>
-            <marker date="1473729420275" expanded="true" signature="13485:13502" placeholder="..." />
-            <marker date="1473729420275" expanded="true" signature="13737:13749" placeholder="..." />
-            <marker date="1473729420275" expanded="true" signature="18135:18145" placeholder="..." />
+            <marker date="1473732763028" expanded="true" signature="13485:13502" placeholder="..." />
+            <marker date="1473732763028" expanded="true" signature="13737:13749" placeholder="..." />
+            <marker date="1473732763028" expanded="true" signature="18135:18145" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -359,14 +359,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="122" column="50" selection-start-line="122" selection-start-column="42" selection-end-line="122" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -375,23 +367,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hmsDirective.js">
+    <entry file="file://$PROJECT_DIR$/hmsDirective.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-131.71428">
-          <caret line="686" column="0" selection-start-line="686" selection-start-column="0" selection-end-line="686" selection-end-column="0" />
-          <folding>
-            <marker date="1473729420275" expanded="true" signature="13485:13502" placeholder="..." />
-            <marker date="1473729420275" expanded="true" signature="13737:13749" placeholder="..." />
-            <marker date="1473729420275" expanded="true" signature="18135:18145" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="-164.9">
+          <caret line="559" column="13" selection-start-line="559" selection-start-column="13" selection-end-line="559" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hmsDirective.scss">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52772075">
-          <caret line="560" column="22" selection-start-line="560" selection-start-column="22" selection-end-line="560" selection-end-column="22" />
+        <state vertical-scroll-proportion="86.78571">
+          <caret line="103" column="96" selection-start-line="103" selection-start-column="96" selection-end-line="103" selection-end-column="96" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hmsDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74174756">
+          <caret line="511" column="7" selection-start-line="511" selection-start-column="7" selection-end-line="511" selection-end-column="7" />
+          <folding>
+            <marker date="1473732763028" expanded="true" signature="13485:13502" placeholder="..." />
+            <marker date="1473732763028" expanded="true" signature="13737:13749" placeholder="..." />
+            <marker date="1473732763028" expanded="true" signature="18135:18145" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

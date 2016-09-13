@@ -101,6 +101,7 @@ bower update  更新所有的 （bower update handLib）更新当前库
 ## hmsSvgLoader
 * 页面跳转时的svg加载动画指令
 ```bash
+注意：需在页面引用 <script src="http://sandbox.runjs.cn/uploads/rs/41/r7zpvbql/hmsSvgLoader.js"></script>
  html中：
  //button为触发事件
   <button ng-click=class1Btn();>
