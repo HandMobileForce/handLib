@@ -10,6 +10,8 @@
     * [hmsInputProgress](#hmsinputprogress)
     * [hmsSelector](#hmsselector)
     * [hmsSlideList](#hmsslidelist)
+    * [hmsLock](#hmsLock)
+    * [hmsLockSetting](#hmsLockSetting)
 * [License](#license)
 
 # Getting Started
@@ -102,8 +104,7 @@ bower update  更新所有的 （bower update handLib）更新当前库
 ```bash
  <hms-to-top img-class="img_restore" checkDrag="true" animation-class="rotate1" img-path="http://sandbox.runjs.cn/uploads/rs/197/vprxhxwe/add.png"></hms-to-top>
 ```
-<<<<<<< HEAD
-## hmsSvgLoader
+# hmsSvgLoader
 * 页面跳转时的svg加载动画指令
 ```bash
 注意：需在页面引用 <script src="http://sandbox.runjs.cn/uploads/rs/41/r7zpvbql/hmsSvgLoader.js"></script>
@@ -122,10 +123,7 @@ bower update  更新所有的 （bower update handLib）更新当前库
   		},3000);
   }
 ```
-## hmsInputProgress
-=======
 # hmsInputProgress
->>>>>>> 75eb8dda4bef85a0204d8d59deb89d954fe5956a
 * 当页面包含输入框等元素时，使用此指令展示输入进度
 ```bash
   html中：
@@ -249,7 +247,6 @@ bower update  更新所有的 （bower update handLib）更新当前库
 # hmsSlideList
 * 带有搜索和分页的下拉框。
 ```bash
-<<<<<<< HEAD
     html中：
          <div class = "optiontextValue">
             <hms-slide-list listData="itemlist" selectData="record" >
@@ -261,7 +258,7 @@ bower update  更新所有的 （bower update handLib）更新当前库
             //选择的值
             $scope.record;
 ```
-## hmsLock
+# hmsLock
 * 手势解锁界面
 ```bash
    html中：
@@ -277,8 +274,8 @@ bower update  更新所有的 （bower update handLib）更新当前库
          };
 
 ```
-## hmsLockSetting
-*手势解锁设置界面 可以进行解锁界面的初始化 设置 关闭功能
+# hmsLockSetting
+* 手势解锁设置界面 可以进行解锁界面的初始化 设置 关闭功能
 ```bash
    html中：
      //新建一个设置手势密码的界面：
@@ -312,16 +309,4 @@ bower update  更新所有的 （bower update handLib）更新当前库
           $rootScope.$on('INIT_GESTURE_PASSWORD', function () {         //接收完成初始化密码操作之后发送的广播
             window.localStorage.gestureLock = "true";
           });
-=======
-   html中：
-   <div class = "optiontextValue">
-    	<hms-slide-list listData="itemlist" selectData="record" >
-      </hms-slide-list>
-   </div>
-   js中：
-   //下拉框的数据列表(数据如果来源于服务器 请将此处注释掉  改写分页方法)
-   $scope.itemlist =[{'data':"122"},{'data':"353"},{'data':"1678"}];
-   //选择的值
-   $scope.record;
 ```
->>>>>>> 75eb8dda4bef85a0204d8d59deb89d954fe5956a
