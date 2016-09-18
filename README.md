@@ -260,7 +260,16 @@ bower update  更新所有的 （bower update handLib）更新当前库
 ```
 # hmsLock
 * 手势解锁界面
+
 ```bash
+   需要引入bower包 地址：https://github.com/wangkaihua/gesture-lock
+   注意检查是否在index.html中引入了myLock.js
+   app.js中：
+    if( window.localStorage.getItem('gesturePassword') && window.localStorage.getItem('gesturePassword') != ''){
+        $urlRouterProvider.otherwise('/tab/lock');//开启了或者设置了密码 跳转到解锁界面
+     } else {
+        $urlRouterProvider.otherwise('/tab/dash');//默认界面
+    }
    html中：
      //新建一个展示手势解锁界面
          <ion-view class="lock">
@@ -277,6 +286,8 @@ bower update  更新所有的 （bower update handLib）更新当前库
 # hmsLockSetting
 * 手势解锁设置界面 可以进行解锁界面的初始化 设置 关闭功能
 ```bash
+   需要引入bower包 地址：https://github.com/wangkaihua/gesture-lock
+   注意检查是否在index.html中引入了myLock.js
    html中：
      //新建一个设置手势密码的界面：
      <ion-header-bar align-title="center" class="bar-stable">

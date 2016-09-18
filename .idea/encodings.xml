@@ -2,7 +2,9 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://E:/hand/app/www/templates/tab-chats.html" charset="UTF-8" />
+    <file url="file://E:/hand/handTabs/bower.json" charset="UTF-8" />
     <file url="file://E:/handdiresct/app/bower.json" charset="UTF-8" />
     <file url="file://E:/handdiresct/app/www/templates/tab-dash.html" charset="UTF-8" />
+    <file url="file://E:/handdiresct/handTabs/app/theme/app.core.scss" charset="UTF-8" />
   </component>
 </project>
