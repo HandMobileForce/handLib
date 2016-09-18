@@ -3,14 +3,18 @@
 ## handLib Contents
 * [Getting Started](#getting-started)
     * [download or update](#download-or-update)
-    * [hmsInputNumber](#hmsInputNumber)
-    * [hmsMouseEven](#hmsMouseEven)
-    * [hmsTable](#hmsTable)
+    * [hmsInputNumber](#hmsinputnumber)
+    * [hmsMouseEven](#hmsmouseeven)
+    * [hmsTable](#hmstable)
+    * [hmsToTop](#hmstoTop)
+    * [hmsInputProgress](#hmsinputprogress)
+    * [hmsSelector](#hmsselector)
+    * [hmsSlideList](#hmsslidelist)
 * [License](#license)
 
 # Getting Started
 
-## download or update
+# download or update
 ```bash
 1、get clone https://github.com/HandMobileForce/handLib.git
 2、修改代码
@@ -22,20 +26,20 @@ bower update  更新所有的 （bower update handLib）更新当前库
     每次下载的是master上最新的代码，这样通过设定的版本号，可以下载某个当前版本的代码。
 ```
 
-## hmsInputNumber 
+# hmsInputNumber 
 * 控制输入必须为数字
 ```bash
   <input type="text" hms-input-number style="width:100%;font-size: 14px;border:1px solid #000000">
 ```
 
-## hmsMouseEven 
+# hmsMouseEven 
 * 操作DOM元素---选中为红色、取消无样式。
 ```bash
    hand-api-mouse-even="yellow"  (选择需要的颜色传入)
   <input type="text" hms-mouse-even="yellow" style="width:100%;font-size: 14px;border:1px solid #000000">
 ```
 
-## hmsTable
+# hmsTable
 
 ```bash
   html ：
@@ -93,11 +97,12 @@ bower update  更新所有的 （bower update handLib）更新当前库
     ];
 ```
 
-## hmsToTop
+# hmsToTop
 * 点击按钮使列表从页面底部回到页面顶部，并且按钮在屏幕中可以随意拖动。
 ```bash
  <hms-to-top img-class="img_restore" checkDrag="true" animation-class="rotate1" img-path="http://sandbox.runjs.cn/uploads/rs/197/vprxhxwe/add.png"></hms-to-top>
 ```
+<<<<<<< HEAD
 ## hmsSvgLoader
 * 页面跳转时的svg加载动画指令
 ```bash
@@ -118,6 +123,9 @@ bower update  更新所有的 （bower update handLib）更新当前库
   }
 ```
 ## hmsInputProgress
+=======
+# hmsInputProgress
+>>>>>>> 75eb8dda4bef85a0204d8d59deb89d954fe5956a
 * 当页面包含输入框等元素时，使用此指令展示输入进度
 ```bash
   html中：
@@ -157,89 +165,91 @@ bower update  更新所有的 （bower update handLib）更新当前库
   	 js中：
   	  $scope.progressColor = ["#1ABC9C", "#EC7063","#3498DB","red","blue"];//设置进度条颜色
 ```
-## hmsSelector
+# hmsSelector
 * 根据数据的多少打开不同的modal页
 ```bash
  html中：
     	<div hms-selector hms-title="'少数据'" hms-value="value.first" hms-modal-value="dataSource1" hms-paging="10"></div>
     	<div hms-selector hms-title="'多数据'" hms-value="value.second" hms-modal-value="dataSource2" hms-paging="10"></div>
  模态框
- //少数据
- <script id="hmsSelector.html" type="text/ng-template">
+
+    <script id="hmsSelector.html" type="text/ng-template">
  		<div class="hmsSelector">
- <div class="row line" ng-click="openModal()">
-   <div class="myTitle">{{hmsTitle}}
-   </div>
-   <div ng-class="{true:'myValueBrown',false:'myValue'}[(hmsValue==='' || hmsValue === null || hmsValue === undefined)]">
-     {{(hmsValue === "" || hmsValue === null || hmsValue === undefined)?"请选择":hmsValue}}
-   </div>
-   <div class="myChevron"><i class="icon ion-chevron-right"></i></div>
-   <div class="marginRight"></div>
- </div>
- </div>
+         <div class="row line" ng-click="openModal()">
+             <div class="myTitle">{{hmsTitle}}
+             </div>
+             <div ng-class="{true:'myValueBrown',false:'myValue'}[(hmsValue==='' || hmsValue === null || hmsValue === undefined)]">
+            {{(hmsValue === "" || hmsValue === null || hmsValue === undefined)?"请选择":hmsValue}}
+            </div>
+             <div class="myChevron"><i class="icon ion-chevron-right"></i></div>
+            <div class="marginRight"></div>
+          </div>
+      </div>
  	</script>
+ 	 //数值多，打开带筛选框的
  	<script id="hms-many-data-modal.html" type="text/ng-template">
  		<div class="modal hmsManyDataModal">
-   <ion-header-bar class="bar bar-positive">
-     <div class="buttons">
-       <button class="button" ng-click="closeModal()">返回</button>
-     </div>
-     <h1 class="title">{{hmsTitle}}</h1>
-     <div class="buttons">
-       <button class="button" ng-click="clear()">清选</button>
-     </div>
-   </ion-header-bar>
-   <ion-header-bar class="bar-subheader">
-   <div>
-   <div class="input-left"><i class="ion-ios-search"></i></div>
-   <div class="input-style">
-   <input class="input-search" placeholder="请输入查询信息" ng-model="info.filter"/>
-     <div class="delete" ng-show="info.filter !== ''" ng-click="delete()"><i class="ion-close"></i></div>
-   </div>
-   </div>
-   </ion-header-bar>
-   <ion-content>
-     <div class="list">
-       <div class="item" ng-repeat="i in hmsModalValue | filter:info.filter" ng-click="choose(i)">{{i}}</div>
-     </div>
-   </ion-content>
- </div>
+         <ion-header-bar class="bar bar-positive">
+            <div class="buttons">
+               <button class="button" ng-click="closeModal()">返回</button>
+             </div>
+         <h1 class="title">{{hmsTitle}}</h1>
+            <div class="buttons">
+                <button class="button" ng-click="clear()">清选</button>
+            </div>
+         </ion-header-bar>
+         <ion-header-bar class="bar-subheader">
+            <div>
+               <div class="input-left"><i class="ion-ios-search"></i></div>
+               <div class="input-style">
+                  <input class="input-search" placeholder="请输入查询信息" ng-model="info.filter"/>
+                   <div class="delete" ng-show="info.filter !== ''" ng-click="delete()"><i class="ion-close"></i></div>
+                </div>
+            </div>
+         </ion-header-bar>
+         <ion-content>
+            <div class="list">
+               <div class="item" ng-repeat="i in hmsModalValue | filter:info.filter" ng-click="choose(i)">{{i}}</div>
+            </div>
+         </ion-content>
+      </div>
  	</script>
- 	//多数据
+ 	//数值不多，打开不带筛选框的
  	<script id="hms-modal.html" type="text/ng-template">
  		<div class="modal hmsModal">
-   <ion-header-bar class="bar bar-border-bottom">
-     <h1 class="title">{{hmsTitle}}</h1>
-     <a class="createNewRecord" ng-click="modal.hide()">
-         <i class="ion-android-close closeIcon">
-       </i>
-     </a>
-   </ion-header-bar>
-   <ion-content>
-     <div class="list">
-       <div class="item" ng-repeat="i in hmsModalValue" ng-click="choose(i)">{{i}}</div>
-     </div>
-   </ion-content>
- </div>
+         <ion-header-bar class="bar bar-border-bottom">
+             <h1 class="title">{{hmsTitle}}</h1>
+            <a class="createNewRecord" ng-click="modal.hide()">
+             <i class="ion-android-close closeIcon">
+               </i>
+            </a>
+         </ion-header-bar>
+         <ion-content>
+            <div class="list">
+               <div class="item" ng-repeat="i in hmsModalValue" ng-click="choose(i)">{{i}}</div>
+               </div>
+         </ion-content>
+      </div>
  	</script>
  	js中的数据：
- 	    $scope.value = {
-            first: "",
-            second: "",
-          };
-    			$scope.dataSource1 = [
-            "数学", "语文"
-          ]
-          $scope.dataSource2 = [
-            "路飞", "娜美", "罗宾", "索隆", "香吉士",
-            "乔巴", "布鲁克", "乌索普", "弗兰奇", "罗杰",
-            "雷利", "龙", "艾斯", "鹰眼", "汉库克",
-            "甚平", "特拉法尔加·罗", "香克斯"
-          ]
+ 	   $scope.value = {
+         first: "",
+         second: "",
+      };
+    	$scope.dataSource1 = [
+         "数学", "语文"
+      ];
+      $scope.dataSource2 = [
+         "路飞", "娜美", "罗宾", "索隆", "香吉士",
+         "乔巴", "布鲁克", "乌索普", "弗兰奇", "罗杰",
+         "雷利", "龙", "艾斯", "鹰眼", "汉库克",
+         "甚平", "特拉法尔加·罗", "香克斯"
+      ];
 ```
-## hmsSlideList
+# hmsSlideList
 * 带有搜索和分页的下拉框。
 ```bash
+<<<<<<< HEAD
     html中：
          <div class = "optiontextValue">
             <hms-slide-list listData="itemlist" selectData="record" >
@@ -302,3 +312,16 @@ bower update  更新所有的 （bower update handLib）更新当前库
           $rootScope.$on('INIT_GESTURE_PASSWORD', function () {         //接收完成初始化密码操作之后发送的广播
             window.localStorage.gestureLock = "true";
           });
+=======
+   html中：
+   <div class = "optiontextValue">
+    	<hms-slide-list listData="itemlist" selectData="record" >
+      </hms-slide-list>
+   </div>
+   js中：
+   //下拉框的数据列表(数据如果来源于服务器 请将此处注释掉  改写分页方法)
+   $scope.itemlist =[{'data':"122"},{'data':"353"},{'data':"1678"}];
+   //选择的值
+   $scope.record;
+```
+>>>>>>> 75eb8dda4bef85a0204d8d59deb89d954fe5956a
