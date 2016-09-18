@@ -509,4 +509,142 @@ angular.module('hmsDirectives', [])
         return $sce.trustAsHtml(result);
       };
       return fn;
+    })
+    .factory('storageLock', function () {
+      var lock;
+      return {
+        initLock: function (config) {
+          lock = new H5lock(config);
+          lock.init();
+        },
+        getLock: function () {
+          return lock;
+        }
+      }
+    })
+    .directive('hmsLock', function () {
+      //手势解锁
+      return {
+        restrict: 'ACE',
+        scope: {
+          tab:'=tab'//解锁后默认跳转的页面
+        },
+        template: '<div class="lock-panel"><h4 id="description"></h4> <canvas id="container"></canvas> </div>',
+        controller: function ($scope, $element, $attrs, $timeout, $state, storageLock) {
+          console.log($scope.canvasid);
+          $timeout(function () {
+            if (!storageLock.getLock()) {
+              var w = window.innerWidth
+                  || document.documentElement.clientWidth
+                  || document.body.clientWidth;
+              console.log(w);
+              var config = {
+                height: w * 8 / 10,
+                width: w * 8 / 10,
+                operation: 2,//解锁模式。
+                descID: "description",
+                canvasID: "container",
+                successUnlockCallback: function () {
+                  var desc = document.getElementById('description');
+                  console.log(desc);
+                  desc.className = '';
+                  $state.go($scope.tab);
+                },
+                errorCallback: function () {
+                  var desc = document.getElementById('description');
+                  console.log(desc);
+                  desc.className = '';
+                  $timeout(function () {
+                    desc.className = 'error-description';
+                  }, 20);
+                }
+              };
+              storageLock.initLock(config);
+            } else {
+              $scope.lock = storageLock.getLock();
+              $scope.lock.init();
+            }
+          }, 100);
+        },
+        replace: true
+      };
+    })
+    .directive('hmsLockSetting', function () {
+      //手势解锁设置
+      return {
+        restrict: 'ACE',
+        scope: {
+          operation: '=operation'
+        },
+        template: ' <div class="lock-panel"><h4 id="setting-description"></h4><canvas id="mini-container"></canvas> <canvas id="setting-container"></canvas></div>',
+        controller: function ($scope, $element, $attrs, $timeout, $state, storageSettingLock, $rootScope, $ionicHistory) {
+          $timeout(function () {
+            if (!storageSettingLock.getLock()) {
+              var w = window.innerWidth
+                  || document.documentElement.clientWidth
+                  || document.body.clientWidth;
+              console.log(w);
+              var config = {
+                height: w * 8 / 10,
+                width: w * 8 / 10,
+                miniHeight: w / 10 * 3,
+                miniWidth: w / 10 * 3,
+                operation: $scope.operation,
+                canvasID: "setting-container",
+                descID: "setting-description",
+                resetID: 'setting-reset',
+                miniCanvasID: "mini-container",
+                successInitCallback: function () {
+                  var desc = document.getElementById('setting-description');
+                  desc.className = '';
+                  $rootScope.$broadcast('INIT_GESTURE_PASSWORD');
+                  $timeout(function () {
+                    $ionicHistory.goBack();
+                  }, 500)
+                },
+                successChangeCallback: function () {
+                  var desc = document.getElementById('setting-description');
+                  desc.className = '';
+                  $timeout(function () {
+                    $ionicHistory.goBack();
+                  }, 500)
+                },
+                successRmLockCallback: function () {
+                  var desc = document.getElementById('setting-description');
+                  desc.className = '';
+                  $rootScope.$broadcast('REMOVE_GESTURE_PASSWORD');
+                  $timeout(function () {
+                    $ionicHistory.goBack();
+                  }, 500)
+                },
+                errorCallback: function () {
+                  var desc = document.getElementById('setting-description');
+                  desc.className = '';
+                  $timeout(function () {
+                    desc.className = 'error-description';               //为desc添加一个抖动动画效果
+                  }, 20);
+                }
+              };
+              storageSettingLock.initLock(config);
+            } else {
+              $scope.lock = storageSettingLock.getLock();
+              $scope.lock.operation = $scope.operation;                   //更新当前操作
+              $scope.lock.init();                                             //重新绘制
+            }
+          }, 100);
+        },
+        replace: true
+      };
+    })
+    .factory('storageSettingLock', function () {
+      var lock;
+      return {
+        initLock: function (config) {
+          lock = new H5lock(config);
+          lock.init();
+        },
+        getLock: function () {
+          return lock;
+        }
+      }
     });
