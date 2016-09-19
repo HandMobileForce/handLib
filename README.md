@@ -10,7 +10,6 @@
     * [hmsInputProgress](#hmsinputprogress)
     * [hmsSelector](#hmsselector)
     * [hmsSlideList](#hmsslidelist)
-    * [hmsLock](#hmsLock)
     * [hmsLockSetting](#hmsLockSetting)
 * [License](#license)
 
@@ -258,36 +257,25 @@ bower update  更新所有的 （bower update handLib）更新当前库
             //选择的值
             $scope.record;
 ```
-# hmsLock
-* 手势解锁界面
-
-```bash
-   需要引入bower包 地址：https://github.com/wangkaihua/gesture-lock
-   注意检查是否在index.html中引入了myLock.js
-   app.js中：
-    if( window.localStorage.getItem('gesturePassword') && window.localStorage.getItem('gesturePassword') != ''){
-        $urlRouterProvider.otherwise('/tab/lock');//开启了或者设置了密码 跳转到解锁界面
-     } else {
-        $urlRouterProvider.otherwise('/tab/dash');//默认界面
-    }
-   html中：
-     //新建一个展示手势解锁界面
-         <ion-view class="lock">
-            <ion-content>
-                <div id="hmsLock" class="hmsLock" descid="data.description" canvasid="data.container" tab="data.tab"></div>
-            </ion-content>
-         </ion-view>
-     js中：
-       $scope.data = {
-           tab:"tab.account"//默认成功解锁后跳转的页面
-         };
-
-```
 # hmsLockSetting
 * 手势解锁设置界面 可以进行解锁界面的初始化 设置 关闭功能
 ```bash
-   需要引入bower包 地址：https://github.com/wangkaihua/gesture-lock
+   需要引入bower包 地址：git://github.com/wangkaihua/gesture-lock
    注意检查是否在index.html中引入了myLock.js
+     app.js中：
+       if( window.localStorage.getItem('gesturePassword') && window.localStorage.getItem('gesturePassword') != ''){
+           $urlRouterProvider.otherwise('/tab/lock');//开启了或者设置了密码 跳转到解锁界面
+        } else {
+           $urlRouterProvider.otherwise('/tab/dash');//默认界面
+       }
+      html中：
+        //新建一个展示手势解锁界面
+          <div align="center" class="hmsLockSetting lock-setting"  operation="data.operation" tab="data.tab"></div>
+        js中：
+          $scope.data = {
+              tab:"tab.account",//默认成功解锁后跳转的页面
+              operation:"2"
+            };
    html中：
      //新建一个设置手势密码的界面：
      <ion-header-bar align-title="center" class="bar-stable">
@@ -297,14 +285,9 @@ bower update  更新所有的 （bower update handLib）更新当前库
            </button>
          </div>
          <h1 class="title">手势密码设置</h1>
-         <div class="buttons" ng-show="(data.operation == 0)">
-           <button class="button button-icon ion-ios-refresh-empty" id="setting-reset">
-             <span class="back-button-text">重设</span>
-           </button>
-         </div>
        </ion-header-bar>
        <ion-content>
-         <div  align="center" class="lock-setting hmsLockSetting" operation="data.operation"></div>
+       <div align="center" class="hmsLockSetting lock-setting"  operation="data.operation"></div>
        </ion-content>
        js中：
           $scope.goBack=function(){
@@ -312,7 +295,7 @@ bower update  更新所有的 （bower update handLib）更新当前库
           };
           //operation可以根据不同的情形进行设置可更改
           $scope.data={
-            operation:0//operation 有三个参数 0：重设密码 1：修改 3：取消设置的密码
+            operation:0//operation 有四个参数 0：重设密码 1：修改 2：初始化密码 3：取消设置的密码
           }
           $rootScope.$on('REMOVE_GESTURE_PASSWORD', function () {         //接收完成取消密码操作之后发送的广播
             window.localStorage.gestureLock = "false";

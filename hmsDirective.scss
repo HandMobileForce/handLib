@@ -564,74 +564,7 @@
 }
 /**svg end**/
 
-.lock .scroll{
-  height: 100vh;
-  margin-top: -44px;
-  position: relative;
-}
-.lock .lock-panel{
-  position: absolute;
-  top:50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  text-align: center;
-}
-.lock .error-description{
-  animation:error-description 0.5s;
-  -webkit-animation:error-description 0.5s;
-}
-@keyframes error-description {
-  0%{
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-  }
-  20%{
-    transform: translateX(-10px);
-    -webkit-transform: translateX(-10px);
-  }
-  40%{
-    transform: translateX(10px);
-    -webkit-transform: translateX(10px);
-  }
-  60%{
-    transform: translateX(-10px);
-    -webkit-transform: translateX(-10px);
-  }
-  80%{
-    transform: translateX(10px);
-    -webkit-transform: translateX(10px);
-  }
-  100%{
-    transform: translateX(0px);
-    -webkit-transform: translateX(0px);
-  }
-}
-@-webkit-keyframes error-description {
-  0%{
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-  }
-  20%{
-    transform: translateX(-20px);
-    -webkit-transform: translateX(-20px);
-  }
-  40%{
-    transform: translateX(20px);
-    -webkit-transform: translateX(20px);
-  }
-  60%{
-    transform: translateX(-20px);
-    -webkit-transform: translateX(-20px);
-  }
-  80%{
-    transform: translateX(20px);
-    -webkit-transform: translateX(20px);
-  }
-  100%{
-    transform: translateX(0px);
-    -webkit-transform: translateX(0px);
-  }
-}
+
 #container{
   margin: 0 10vw;
   width: 80vw;
@@ -714,4 +647,16 @@
   margin: 0 10vw;
   width: 80vw;
   height: 80vw;
+}
+.lock-setting #setting-reset{
+  margin:0 auto;
+  display:block;
+  font-size:0.8em;
+  width:3.5em;
+  height:3.5em;
+  line-height:3em;
+  background-color:white;
+  border-radius:2em;
+  border: 1px solid #1992EA;
+  color: #1992EA;
 }

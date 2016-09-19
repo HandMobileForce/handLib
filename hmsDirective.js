@@ -510,73 +510,21 @@ angular.module('hmsDirectives', [])
       };
       return fn;
     })
-    .factory('storageLock', function () {
-      var lock;
-      return {
-        initLock: function (config) {
-          lock = new H5lock(config);
-          lock.init();
-        },
-        getLock: function () {
-          return lock;
-        }
-      }
-    })
-    .directive('hmsLock', function () {
-      //手势解锁
-      return {
-        restrict: 'ACE',
-        scope: {
-          tab:'=tab'//解锁后默认跳转的页面
-        },
-        template: '<div class="lock-panel"><h4 id="description"></h4> <canvas id="container"></canvas> </div>',
-        controller: function ($scope, $element, $attrs, $timeout, $state, storageLock) {
-          console.log($scope.canvasid);
-          $timeout(function () {
-            if (!storageLock.getLock()) {
-              var w = window.innerWidth
-                  || document.documentElement.clientWidth
-                  || document.body.clientWidth;
-              console.log(w);
-              var config = {
-                height: w * 8 / 10,
-                width: w * 8 / 10,
-                operation: 2,//解锁模式。
-                descID: "description",
-                canvasID: "container",
-                successUnlockCallback: function () {
-                  var desc = document.getElementById('description');
-                  console.log(desc);
-                  desc.className = '';
-                  $state.go($scope.tab);
-                },
-                errorCallback: function () {
-                  var desc = document.getElementById('description');
-                  console.log(desc);
-                  desc.className = '';
-                  $timeout(function () {
-                    desc.className = 'error-description';
-                  }, 20);
-                }
-              };
-              storageLock.initLock(config);
-            } else {
-              $scope.lock = storageLock.getLock();
-              $scope.lock.init();
-            }
-          }, 100);
-        },
-        replace: true
-      };
-    })
     .directive('hmsLockSetting', function () {
       //手势解锁设置
       return {
         restrict: 'ACE',
         scope: {
-          operation: '=operation'
+          operation: '=operation',
+          tab:'=tab'
         },
-        template: ' <div class="lock-panel"><h4 id="setting-description"></h4><canvas id="mini-container"></canvas> <canvas id="setting-container"></canvas></div>',
+        replace:true,
+        template: '<div class="lock-panel">' +
+        '<h4 id="setting-description"></h4>' +
+        '<canvas id="mini-container"></canvas> ' +
+        '<canvas id="setting-container"></canvas> ' +
+        '<button id="setting-reset" ng-show="({{operation}} == 0)">重设</button>' +
+        '</div>',
         controller: function ($scope, $element, $attrs, $timeout, $state, storageSettingLock, $rootScope, $ionicHistory) {
           $timeout(function () {
             if (!storageSettingLock.getLock()) {
@@ -616,6 +564,11 @@ angular.module('hmsDirectives', [])
                   $timeout(function () {
                     $ionicHistory.goBack();
                   }, 500)
+                },
+                successUnlockCallback: function () {
+                  var desc = document.getElementById('setting-description');
+                  desc.className = '';
+                  $state.go($scope.tab);
                 },
                 errorCallback: function () {
                   var desc = document.getElementById('setting-description');
