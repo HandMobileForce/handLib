@@ -516,7 +516,16 @@ angular.module('hmsDirectives', [])
         restrict: 'ACE',
         scope: {
           operation: '=operation',
-          tab:'=tab'
+          strokestyle:'=strokestyle',
+          fillstyle:'=fillstyle',
+          linewidth:'=linewidth',
+          choosetype:'=choosetype',
+          havedelta:'=havedelta',
+          successinit:'&',
+          successchange:'&',
+          successrmlock:'&',
+          successunlock:'&',
+          errorcallback:'&'
         },
         replace:true,
         template: '<div class="lock-panel">' +
@@ -542,40 +551,41 @@ angular.module('hmsDirectives', [])
                 descID: "setting-description",
                 resetID: 'setting-reset',
                 miniCanvasID: "mini-container",
+                haveDelta:$scope.havedelta,//连接小圆圈的箭头 默认为fasle
+                fillStyle:$scope.fillstyle,//连接线的颜色 默认为蓝色
+                strokeStyle:$scope.strokestyle,//圆圈颜色 默认为蓝色
+                lineWidth:$scope.linewidth,//连接线的粗细 默认为2px
+                chooseType:$scope.choosetype,//n*n 默认为9宫格
                 successInitCallback: function () {
                   var desc = document.getElementById('setting-description');
                   desc.className = '';
+                  $scope.successinit();
                   $rootScope.$broadcast('INIT_GESTURE_PASSWORD');
-                  $timeout(function () {
-                    $ionicHistory.goBack();
-                  }, 500)
                 },
                 successChangeCallback: function () {
                   var desc = document.getElementById('setting-description');
                   desc.className = '';
-                  $timeout(function () {
-                    $ionicHistory.goBack();
-                  }, 500)
+                  $scope.successchange();
                 },
                 successRmLockCallback: function () {
                   var desc = document.getElementById('setting-description');
                   desc.className = '';
                   $rootScope.$broadcast('REMOVE_GESTURE_PASSWORD');
-                  $timeout(function () {
-                    $ionicHistory.goBack();
-                  }, 500)
+                  $scope.successrmlock();
                 },
                 successUnlockCallback: function () {
                   var desc = document.getElementById('setting-description');
                   desc.className = '';
-                  $state.go($scope.tab);
+                  $scope.successunlock();
                 },
                 errorCallback: function () {
                   var desc = document.getElementById('setting-description');
                   desc.className = '';
                   $timeout(function () {
-                    desc.className = 'error-description';               //为desc添加一个抖动动画效果
+                    desc.className = 'error-description';//为desc添加一个抖动动画效果
+                    $scope.errorcallback();
                   }, 20);
+
                 }
               };
               storageSettingLock.initLock(config);
@@ -585,8 +595,7 @@ angular.module('hmsDirectives', [])
               $scope.lock.init();                                             //重新绘制
             }
           }, 100);
-        },
-        replace: true
+        }
       };
     })
     .factory('storageSettingLock', function () {

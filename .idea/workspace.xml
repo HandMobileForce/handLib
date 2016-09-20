@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a02d003-56eb-413a-9101-636cbfa85b0d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hmsDirective.js" afterPath="$PROJECT_DIR$/hmsDirective.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="handLib.iws" />
@@ -48,12 +48,12 @@
       <file leaf-file-name="hmsDirective.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hmsDirective.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="512" column="4" selection-start-line="512" selection-start-column="4" selection-end-line="512" selection-end-column="4" />
+            <state vertical-scroll-proportion="-10.785714">
+              <caret line="522" column="19" selection-start-line="522" selection-start-column="10" selection-end-line="522" selection-end-column="19" />
               <folding>
-                <marker date="1474252481966" expanded="true" signature="13485:13502" placeholder="..." />
-                <marker date="1474252481966" expanded="true" signature="13737:13749" placeholder="..." />
-                <marker date="1474252481966" expanded="true" signature="18135:18145" placeholder="..." />
+                <marker date="1474356202815" expanded="true" signature="13485:13502" placeholder="..." />
+                <marker date="1474356202815" expanded="true" signature="13737:13749" placeholder="..." />
+                <marker date="1474356202815" expanded="true" signature="18135:18145" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -62,8 +62,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6247756">
-              <caret line="295" column="35" selection-start-line="295" selection-start-column="35" selection-end-line="295" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.7488987">
+              <caret line="278" column="73" selection-start-line="278" selection-start-column="73" selection-end-line="278" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -72,8 +72,8 @@
       <file leaf-file-name="hmsDirective.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hmsDirective.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="650" column="29" selection-start-line="650" selection-start-column="29" selection-end-line="650" selection-end-column="29" />
+            <state vertical-scroll-proportion="-8.139535">
+              <caret line="596" column="3" selection-start-line="596" selection-start-column="3" selection-end-line="596" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -275,18 +275,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7879282" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16639479" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16639479" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -326,9 +326,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="512" column="4" selection-start-line="512" selection-start-column="4" selection-end-line="512" selection-end-column="4" />
           <folding>
-            <marker date="1474252481966" expanded="true" signature="13485:13502" placeholder="..." />
-            <marker date="1474252481966" expanded="true" signature="13737:13749" placeholder="..." />
-            <marker date="1474252481966" expanded="true" signature="18135:18145" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="13485:13502" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="13737:13749" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="18135:18145" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -386,9 +386,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="601" column="43" selection-start-line="601" selection-start-column="19" selection-end-line="601" selection-end-column="43" />
           <folding>
-            <marker date="1474252481966" expanded="true" signature="13485:13502" placeholder="..." />
-            <marker date="1474252481966" expanded="true" signature="13737:13749" placeholder="..." />
-            <marker date="1474252481966" expanded="true" signature="18135:18145" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="13485:13502" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="13737:13749" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="18135:18145" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -446,9 +446,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="508" column="40" selection-start-line="508" selection-start-column="40" selection-end-line="508" selection-end-column="40" />
           <folding>
-            <marker date="1474252481966" expanded="true" signature="13485:13502" placeholder="..." />
-            <marker date="1474252481966" expanded="true" signature="13737:13749" placeholder="..." />
-            <marker date="1474252481966" expanded="true" signature="18135:18145" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="13485:13502" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="13737:13749" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="18135:18145" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -498,9 +498,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1474252481966" expanded="true" signature="13485:13502" placeholder="..." />
-            <marker date="1474252481966" expanded="true" signature="13737:13749" placeholder="..." />
-            <marker date="1474252481966" expanded="true" signature="18135:18145" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="13485:13502" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="13737:13749" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="18135:18145" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -550,9 +550,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1474252481966" expanded="true" signature="13485:13502" placeholder="..." />
-            <marker date="1474252481966" expanded="true" signature="13737:13749" placeholder="..." />
-            <marker date="1474252481966" expanded="true" signature="18135:18145" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="13485:13502" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="13737:13749" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="18135:18145" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -602,9 +602,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="511" column="7" selection-start-line="511" selection-start-column="7" selection-end-line="511" selection-end-column="7" />
           <folding>
-            <marker date="1474252481966" expanded="true" signature="13485:13502" placeholder="..." />
-            <marker date="1474252481966" expanded="true" signature="13737:13749" placeholder="..." />
-            <marker date="1474252481966" expanded="true" signature="18135:18145" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="13485:13502" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="13737:13749" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="18135:18145" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -654,9 +654,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="269" column="0" selection-start-line="269" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
           <folding>
-            <marker date="1474252481966" expanded="true" signature="13485:13502" placeholder="..." />
-            <marker date="1474252481966" expanded="true" signature="13737:13749" placeholder="..." />
-            <marker date="1474252481966" expanded="true" signature="18135:18145" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="13485:13502" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="13737:13749" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="18135:18145" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -709,26 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hmsDirective.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="512" column="4" selection-start-line="512" selection-start-column="4" selection-end-line="512" selection-end-column="4" />
-          <folding>
-            <marker date="1474252481966" expanded="true" signature="13485:13502" placeholder="..." />
-            <marker date="1474252481966" expanded="true" signature="13737:13749" placeholder="..." />
-            <marker date="1474252481966" expanded="true" signature="18135:18145" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hmsDirective.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="650" column="29" selection-start-line="650" selection-start-column="29" selection-end-line="650" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.535714">
@@ -737,10 +717,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hmsDirective.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.139535">
+          <caret line="596" column="3" selection-start-line="596" selection-start-column="3" selection-end-line="596" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hmsDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.785714">
+          <caret line="522" column="19" selection-start-line="522" selection-start-column="10" selection-end-line="522" selection-end-column="19" />
+          <folding>
+            <marker date="1474356202815" expanded="true" signature="13485:13502" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="13737:13749" placeholder="..." />
+            <marker date="1474356202815" expanded="true" signature="18135:18145" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6247756">
-          <caret line="295" column="35" selection-start-line="295" selection-start-column="35" selection-end-line="295" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.7488987">
+          <caret line="278" column="73" selection-start-line="278" selection-start-column="73" selection-end-line="278" selection-end-column="73" />
           <folding />
         </state>
       </provider>
