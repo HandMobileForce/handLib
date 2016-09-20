@@ -299,8 +299,7 @@ bower update  更新所有的 （bower update handLib）更新当前库
          <h1 class="title">手势密码设置</h1>
        </ion-header-bar>
        <ion-content>
-       <div align="center" class="hmsLockSetting lock-setting"  operation="data.operation" fillstyle="red" strokestyle="red" linewidth="3" choosetype="3"
-       successinit="successInit()" errorcallback="errorcallback()">
+       <div align="center" class="hmsLockSetting lock-setting"  havedelta="data.haveDelta"  operation="data.operation" fillstyle="data.fillstyle" tab="data.tab" errorcallback="errorcallback()" successinit="successInit()">
 
        </div>
        </ion-content>
@@ -310,8 +309,10 @@ bower update  更新所有的 （bower update handLib）更新当前库
           };
           //operation可以根据不同的情形进行设置可更改
           $scope.data={
-            operation:0
-          }
+                operation:"0",
+                fillstyle:"red",
+                haveDelta:true
+              };
           $scope.errorcallback=function(){
              alert("失败")
           }
