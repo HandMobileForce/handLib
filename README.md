@@ -299,7 +299,7 @@ bower update  更新所有的 （bower update handLib）更新当前库
          <h1 class="title">手势密码设置</h1>
        </ion-header-bar>
        <ion-content>
-       <div align="center" class="hmsLockSetting lock-setting"  havedelta="data.haveDelta"  operation="data.operation" fillstyle="data.fillstyle" tab="data.tab" errorcallback="errorcallback()" successinit="successInit()">
+       <div align="center" class="hmsLockSetting lock-setting"  havedelta="data.haveDelta"  operation="data.operation" fillstyle="data.fillstyle"  errorcallback="errorcallback()" successinit="successInit()">
 
        </div>
        </ion-content>
