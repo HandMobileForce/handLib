@@ -293,9 +293,9 @@ bower update  更新所有的 （bower update handLib）更新当前库
           $scope.goBack=function(){
             $ionicHistory.goBack();
           };
-          //operation可以根据不同的情形进行设置可更改
+          //operation可以根据不同的情形进行设置和更改
           $scope.data={
-            operation:0//operation 有四个参数 0：重设密码 1：修改 2：初始化密码 3：取消设置的密码
+            operation:0//0表示初始化操作,1表示修改密码操作,2表示解锁操作,3表示取消密码操作
           }
           $rootScope.$on('REMOVE_GESTURE_PASSWORD', function () {         //接收完成取消密码操作之后发送的广播
             window.localStorage.gestureLock = "false";
