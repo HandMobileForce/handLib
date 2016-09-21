@@ -266,6 +266,8 @@ bower update  更新所有的 （bower update handLib）更新当前库
                    operation:0//0表示初始化操作,1表示修改密码操作,2表示解锁操作,3表示取消密码操作
                    fillstyle:""//连接线的颜色 默认为蓝色
                    strokestyle:"",//圆圈颜色 默认为蓝色
+                   minifillstyle:'',//mini连接线的颜色 默认为蓝色
+                   ministrokestyle:'',//mini圆圈颜色 默认为蓝色
                    linewidth:"2",//连接线的粗细 默认为2px
                    choosetype:"3",//n*n 默认为9宫格
                    havedelta:false,//是否需要箭头指示 默认为false

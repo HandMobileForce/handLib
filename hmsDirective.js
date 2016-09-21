@@ -518,6 +518,8 @@ angular.module('hmsDirectives', [])
           operation: '=operation',
           strokestyle:'=strokestyle',
           fillstyle:'=fillstyle',
+          minifillstyle:'=minifillstyle',
+          ministrokestyle:'=ministrokestyle',
           linewidth:'=linewidth',
           choosetype:'=choosetype',
           havedelta:'=havedelta',
@@ -556,6 +558,8 @@ angular.module('hmsDirectives', [])
                 strokeStyle:$scope.strokestyle,//圆圈颜色 默认为蓝色
                 lineWidth:$scope.linewidth,//连接线的粗细 默认为2px
                 chooseType:$scope.choosetype,//n*n 默认为9宫格
+                miniFillStyle:$scope.minifillstyle,
+                miniStrokeStyle:$scope.ministrokestyle,
                 successInitCallback: function () {
                   var desc = document.getElementById('setting-description');
                   desc.className = '';
